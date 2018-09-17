@@ -4658,6 +4658,50 @@ namespace Nati_Supermarket_and_Takeaway_WinForms
             gbxAddUnitOfMeasure.Visible = false;
         }
         #endregion
+         #region Populate Food Order Screen
+        void PopulateFoodDataGridView()
+        {
+            int n = 0;
+            foreach(DataGridViewRow row in dgvFoodOrderScreen.Rows)
+            {
+                if (dgvFoodPOS.Rows.Count != n + 1)
+                {
+                    dgvFoodOrderScreen.Rows.Add();
+                    dgvFoodOrderScreen.Rows[n].Cells[0].Value = row.Cells[0].Value.ToString();
+                    dgvFoodOrderScreen.Rows[n].Cells[1].Value = row.Cells[0].Value.ToString();
+                    dgvFoodOrderScreen.Rows[n].Cells[2].Value = row.Cells[0].Value.ToString();
+                }
+                n += 1;
+            }
+        }
+        #endregion
+
+        private void btnChangeVAT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (NatiSupermarketandTakeawayFinalEntities db = new NatiSupermarketandTakeawayFinalEntities())
+                {
+                    var VATQry = (from ID in db.VATs
+                                        where ID.VatID
+                                        select new {ID.VatID,ID.VatAmount}
+                              ).FirstOrDefault();
+                    db.spUpdateEmployee(Convert.ToInt32(txtEmpID.Text), txtEmpName.Text, txtEmpSurname.Text, txtEmpNumber.Text, txtEmpAddress.Text, txtEmpEmail.Text, txtLoginPassword.Text, SecurityQuestionIDQry.Security_Question_ID, txtSecurityQuestion.Text, convertImagetoByte(pbxEmployeePhoto.Image), txtEmployeeBankName.Text, txtEmployeeBranchCode.Text, txtEmployeeAccountNo.Text, EmpTitleIDQry.Employee_Title_ID, EmpTypeIDQry.Employee_Type_ID, Convert.ToDateTime(lblDatePOS.Text), DateTime.Now.TimeOfDay, txtEmployeeNameProfile.Text, "Updating an existing Employee", txtEmpName.Text + " was updated");
+
+                    db.SaveChanges();
+
+                    PopulateEmpDGV();
+                    PopulateAuditLogDGV();
+                    MessageBox.Show("The new Employee has been successfully updated", "Successful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+            }
+        }
+}
     }
 }
 
