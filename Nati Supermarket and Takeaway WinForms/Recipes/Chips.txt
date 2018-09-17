@@ -1,0 +1,11 @@
+Recipe Name:Chips
+Ingredients:
+Oil
+Chips
+Salt
+Directions:
+Add the oil. 
+Heat the oil.
+etc.
+Note:
+Dont leave for too long.

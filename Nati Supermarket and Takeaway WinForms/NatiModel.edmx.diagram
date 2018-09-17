@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="56594b29a38f42279d734e1984092d29" Name="Diagram1">
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Audit_Log" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Backup" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Employee" Width="1.5" PointX="3.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Employee_Access_Level" Width="1.5" PointX="1.5" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Employee_Shift" Width="1.5" PointX="3.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Employee_Title" Width="1.5" PointX="1.5" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Employee_Type" Width="1.5" PointX="1.5" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Food_Order_Line" Width="1.5" PointX="15.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Inventory_Item" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Inventory_Item_Type" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Inventory_Price" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Inventory_Write_off_Line" Width="1.875" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Menu_Item" Width="1.5" PointX="13" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Menu_Item_Category" Width="1.5" PointX="10.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Menu_Item_Price" Width="1.5" PointX="15.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Prepare_Inventory_Line" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Prepare_Inventory_Type" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Sale_Status" Width="1.5" PointX="3.75" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Sale_Type" Width="1.5" PointX="3.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Sale" Width="1.5" PointX="6" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Sales_Line" Width="1.5" PointX="8.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Security_Question" Width="1.5" PointX="1.5" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Slot" Width="1.5" PointX="6" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Stock_Take" Width="1.5" PointX="6" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Stock_Take_Line" Width="1.5" PointX="8.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Supplier" Width="1.5" PointX="3.75" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Supplier_Order" Width="1.5" PointX="6" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Supplier_Order_List" Width="1.5" PointX="8.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.sysdiagram" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Unit_Of_Measure" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Employee_Employee_Title" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Employee_Employee_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Employee_Security_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Sales_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Slot_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Employee_Type_Employee_Access_Level" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Slot_Employee_Shift" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Food_Order_Line_Menu_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Food_Order_Line_Sales" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Inventory_Item_Inventory_Item_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Inventory_Item_Unit_Of_Measure" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Inventory_Price_Inventory_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Inventory_Write_off_Line_Inventory_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Prepare_Inventory_Inventory_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Sales_Line_Inventory_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Stock_Take_Line_Inventory_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Supplier_Order_List_Inventory_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Menu_Item_Menu_Item_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Menu_Item_Price_Menu_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Prepare_Inventory_Line_Prepare_Inventory_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Sales_Sale_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Sale_Type_Sale_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Sales_Sale_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Sales_Line_Sales" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Stock_Take_Line_Stock_Take" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Supply_Order_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Supplier_Order_List_Supply_Order" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Supplier_Payment" Width="1.5" PointX="8.375" PointY="14.875" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Supplier_Order_Supplier_Payment_Type" />
+        <EntityTypeShape EntityType="NatiSupermarketandTakeawayFinalModel.Inventory_Write_Off" Width="2.25" PointX="10.375" PointY="14.875" />
+        <AssociationConnector Association="NatiSupermarketandTakeawayFinalModel.FK_Inventory_Write_off_Line_Inventory_Write_Off" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

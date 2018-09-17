@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4A0988B-1CFA-4E68-8A43-0F6C9AF85B49}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nati_Supermarket_and_Takeaway_WinForms</RootNamespace>
+    <AssemblyName>Nati Supermarket and Takeaway WinForms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsFormsCalendar">
+      <HintPath>..\..\..\..\..\Downloads\WinFormsCalendar_1.1\WindowsFormsCalendar.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEditEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditEmployeeForm.Designer.cs">
+      <DependentUpon>AddEditEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditInventoryItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditInventoryItemForm.Designer.cs">
+      <DependentUpon>AddEditInventoryItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditMenuItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditMenuItemForm.Designer.cs">
+      <DependentUpon>AddEditMenuItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditSupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditSupplierForm.Designer.cs">
+      <DependentUpon>AddEditSupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmpPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmpPicture.Designer.cs">
+      <DependentUpon>AddEmpPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Audit_Log.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Backup.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Access_Level.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Shift.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Title.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Type.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExecutiveReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExecutiveReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FoodOrderReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodOrderReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Food_Order_Line.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Levels Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory Levels Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory_Item.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_Item_Type.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_Price.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_Write_Off.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_Write_off_Line.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvLevelsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvLevelsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InvUsageReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvUsageReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="INVUSEreport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>INVUSEreport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menu_Item.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Item_Category.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Item_Price.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NatiModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NatiModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NatiModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NatiModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NatiModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Prepare_Inventory_Line.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prepare_Inventory_Type.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sale.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sales_Line.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sale_Status.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sale_Type.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Security_Question.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Slot.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_Take.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_Take_Line.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierPaymentForm.Designer.cs">
+      <DependentUpon>SupplierPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckInInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckInInventoryForm.Designer.cs">
+      <DependentUpon>CheckInInventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckInOutEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckInOutEmployeeForm.Designer.cs">
+      <DependentUpon>CheckInOutEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOutInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOutInventoryForm.Designer.cs">
+      <DependentUpon>CheckOutInventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformStockTake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformStockTake.Designer.cs">
+      <DependentUpon>PerformStockTake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POSInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POSInventoryForm.Designer.cs">
+      <DependentUpon>POSInventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POSForm.Designer.cs">
+      <DependentUpon>POSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POSMenuItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POSMenuItem.Designer.cs">
+      <DependentUpon>POSMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiveCashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiveCashForm.Designer.cs">
+      <DependentUpon>ReceiveCashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShiftForm.Designer.cs">
+      <DependentUpon>ShiftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashUpForm.Designer.cs">
+      <DependentUpon>CashUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LockForm.Designer.cs">
+      <DependentUpon>LockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MenuItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuItemForm.Designer.cs">
+      <DependentUpon>MenuItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateSaleReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateSaleReceiptForm.Designer.cs">
+      <DependentUpon>GenerateSaleReceiptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Supplier_Order.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier_Order_List.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier_Payment.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Unit_Of_Measure.cs">
+      <DependentUpon>NatiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.cs" />
+    <Compile Include="wRITTENoffINVREPORT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wRITTENoffINVREPORT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="AddEditEmployeeForm.resx">
+      <DependentUpon>AddEditEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditInventoryItemForm.resx">
+      <DependentUpon>AddEditInventoryItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditMenuItemForm.resx">
+      <DependentUpon>AddEditMenuItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditSupplierForm.resx">
+      <DependentUpon>AddEditSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEmpPicture.resx">
+      <DependentUpon>AddEmpPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashUpForm.resx">
+      <DependentUpon>CashUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutiveReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ExecutiveReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodOrderReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FoodOrderReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Levels Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Inventory Levels Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvLevelsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InvLevelsReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvUsageReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InvUsageReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INVUSEreport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>INVUSEreport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierPaymentForm.resx">
+      <DependentUpon>SupplierPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckInInventoryForm.resx">
+      <DependentUpon>CheckInInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckInOutEmployeeForm.resx">
+      <DependentUpon>CheckInOutEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOutInventoryForm.resx">
+      <DependentUpon>CheckOutInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformStockTake.resx">
+      <DependentUpon>PerformStockTake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POSInventoryForm.resx">
+      <DependentUpon>POSInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POSForm.resx">
+      <DependentUpon>POSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POSMenuItem.resx">
+      <DependentUpon>POSMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiveCashForm.resx">
+      <DependentUpon>ReceiveCashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LockForm.resx">
+      <DependentUpon>LockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ShiftForm.resx">
+      <DependentUpon>ShiftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuItemForm.resx">
+      <DependentUpon>MenuItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateSaleReceiptForm.resx">
+      <DependentUpon>GenerateSaleReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SupplierReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wRITTENoffINVREPORT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>wRITTENoffINVREPORT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="NatiModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NatiModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ExecutiveAnalysis.rpt" />
+    <None Include="NatiModel.edmx.diagram">
+      <DependentUpon>NatiModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Revised_Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NatiModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NatiModel.edmx</DependentUpon>
+      <LastGenOutput>NatiModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NatiModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NatiModel.edmx</DependentUpon>
+      <LastGenOutput>NatiModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
